@@ -1,5 +1,47 @@
 # Média aritmética para dados agrupados
+import tkinter as tk
+from tkinter import ttk
+from tkinter import filedialog as fd
 from time import sleep
+
+# Root window
+root = tk.Tk()
+root.title('Tela CaioEstatistico')
+root.resizable(False, False)
+root.geometry('550x250')
+
+# Text editor
+text = tk.Text(root, height=12)
+text.grid(column=0, row=0, sticky='nsew')
+
+
+def open_text_file():
+    # file type
+    filetypes = (
+        ('text files', '*.txt'),
+        ('All files', '*.*')
+    )
+    # show the open file dialog
+    f = fd.askopenfile(filetypes=filetypes)
+    # read the text filand show its content on the Text
+    text.insert('1.0', f.readlines())
+
+
+# open file button
+open_button = ttk.Button(
+    root,
+    text='Escolha um arquivo',
+    command=open_text_file
+)
+
+open_button.grid(column=0, row=1, sticky='w', padx=10, pady=10)
+
+
+root.mainloop()
+
+
+filename = dlg.askopenfilename()
+
 
 dado = [4, 4.56, 5.25, 5.73, 6.26, 6.66,
         6.68, 7.39, 7.44, 7.59, 8.12, 8.46, 8.74, 8.95, 9.13,
