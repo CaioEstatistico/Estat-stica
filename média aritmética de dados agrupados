@@ -4,9 +4,16 @@ from tkinter import ttk
 from tkinter import filedialog as fd
 from time import sleep
 
+#Menu ( ideia inicial )
+#menu = Tk()
+#menu.title("Menu")
+#menu.resizable(1,1)
+#menu.geometry('550x250+400+100')
+
+
 # Pagina de importação ( PagI )
 PagI = tk.Tk()
-PagI.title('Estatistico the games')
+PagI.title('Importação de arquivo')
 PagI.resizable(True, True)
 PagI.geometry('550x250+400+100')
 
