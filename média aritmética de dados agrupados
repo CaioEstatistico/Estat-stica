@@ -16,6 +16,7 @@ PagI = tk.Tk()
 PagI.title('Importação de arquivo')
 PagI.resizable(True, True)
 PagI.geometry('550x250+400+100')
+#PagI.iconbitmap("imagem/icon_menu.png")
 
 
 text = tk.Text(PagI, height=12)
@@ -26,7 +27,7 @@ def open_text_file():
     # Tipo de arquivo
     filetypes = (
         ('text files', '*.txt'), # tipo texto
-        ('All files', '*.*')
+        ('csv files', '*.csv*')
     )
     # abrir tela de importação
     f = fd.askopenfile(filetypes=filetypes)
@@ -34,14 +35,14 @@ def open_text_file():
 
 
 # Botão para abrir um arquivo
-open_button = ttk.Button(
+Botao2 = ttk.Button(
     PagI,
     text='Escolha um arquivo',
     command=open_text_file
+
 )
 
-open_button.grid(column=0, row=1, sticky='w', padx=10, pady=10)
-
+Botao2.grid(column=0, row=1, sticky='w', padx=10, pady=10)
 
 PagI.mainloop()
 
@@ -120,10 +121,6 @@ print(f' Média: {somatório:.3f}')
 
     
     
-
-
-
-
 
 
 
